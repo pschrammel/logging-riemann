@@ -33,7 +33,7 @@ RSpec.describe Logging::Appenders::Riemann do
     it "creates a hash for event" do
       hash=appender.event2riemann_hash(Logging::LogEvent.new("test",1,{:arg => "value"},false))
       expect(hash).to eq(:arg=>"value",
-                          :sate=>"INFO",
+                          :state=>"INFO",
                           :host=>"myhost",
                           :service=>"metric",
                           :description=>nil,
@@ -43,7 +43,7 @@ RSpec.describe Logging::Appenders::Riemann do
     it "create a reimann event" do
       expect(appender.riemann_client).to receive(:<<).
                                              with({:description=>"wooha",
-                                                   :sate=>"INFO",
+                                                   :state=>"INFO",
                                                    :host=>"myhost",
                                                    :service=>"metric",
                                                    :time=>@now.to_i})

@@ -40,7 +40,7 @@ module Logging
 
 
         @mapper.call(riemann_event)
-        riemann_event[:sate] ||= ::Logging::LNAMES[logging_event.level]
+        riemann_event[:state] ||= ::Logging::LNAMES[logging_event.level]
         riemann_event[:host] ||= @host
         riemann_event[:service] ||= @name
         riemann_event[:description] ||= logging_event.data[:message]

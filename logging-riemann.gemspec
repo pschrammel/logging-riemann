@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name = "logging-riemann"
-  spec.version = "0.0.1" #Logging::Riemann::VERSION
+  spec.version = "0.0.2" #Logging::Riemann::VERSION
   spec.authors = ["Peter Schrammel"]
   spec.email = ["peter.schrammel@preisanalytics.de"]
   spec.summary = %q{Logs to riemann}
